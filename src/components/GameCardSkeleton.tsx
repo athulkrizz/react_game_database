@@ -1,6 +1,6 @@
 import { Card, CardBody, Skeleton, SkeletonText } from "@chakra-ui/react";
 
-function GameCardSkeleton() {
+const GameCardSkeleton = () => {
   return (
     <Card width="300px">
       <Skeleton height="200px" borderRadius={10} overflow={"hidden"} />
@@ -9,6 +9,6 @@ function GameCardSkeleton() {
       </CardBody>
     </Card>
   );
-}
+};
 
 export default GameCardSkeleton;

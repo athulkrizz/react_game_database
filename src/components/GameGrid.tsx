@@ -9,7 +9,7 @@ interface Props {
   selectedGenre: Genres | null;
 }
 
-function GameGrid({ selectedGenre }: Props) {
+const GameGrid = ({ selectedGenre }: Props) => {
   const { data, error, isLoading } = useGames(selectedGenre);
   const skeletons = [1, 2, 4, 5, 6];
 
@@ -35,6 +35,6 @@ function GameGrid({ selectedGenre }: Props) {
       </SimpleGrid>
     </>
   );
-}
+};
 
 export default GameGrid;

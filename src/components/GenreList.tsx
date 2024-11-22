@@ -15,7 +15,7 @@ interface Props {
   selectedGenre: Genres | null;
 }
 
-function GenreList({ onSelectedGenre, selectedGenre }: Props) {
+const GenreList = ({ onSelectedGenre, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   if (isLoading) {
     return <Spinner />;
@@ -46,6 +46,6 @@ function GenreList({ onSelectedGenre, selectedGenre }: Props) {
       ))}
     </List>
   );
-}
+};
 
 export default GenreList;
