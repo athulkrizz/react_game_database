@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 export interface FetchResponse<T> {
     count: number;
+    next: string | null;
     results: T[];
 }
 
