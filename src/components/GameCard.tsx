@@ -8,6 +8,7 @@ import Emoji from "./Emoji";
 interface Props {
   game: Games;
 }
+
 const GameCard = ({ game }: Props) => {
   return (
     <Card>
