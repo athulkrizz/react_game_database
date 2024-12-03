@@ -18,12 +18,15 @@ interface Props {
 
 const GenreList = ({ onSelectedGenre, selectedGenreId }: Props) => {
   const { data, isLoading, error } = useGenres();
+
   if (isLoading) {
     return <Spinner />;
   }
+
   if (error) {
     return <Text>No Data Available.</Text>;
   }
+
   return (
     <>
       <Heading fontSize="2xl" marginBottom={3}>
