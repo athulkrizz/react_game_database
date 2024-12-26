@@ -33,7 +33,10 @@ const GenreList = () => {
       </Heading>
       <List>
         {data?.results.map((genre) => (
-          <ListItem key={genre.id} paddingY="5px">
+          <ListItem key={genre.id} paddingY="8px" _hover={{
+            transform: "scale(1.03)",
+            transition: "transform .15s ease-in",
+          }}>
             <HStack>
               <Image
                 boxSize="32px"
@@ -48,6 +51,9 @@ const GenreList = () => {
                 fontWeight={genre.id === selectedGenreId ? "bold" : "normal"}
                 whiteSpace="normal"
                 textAlign="left"
+                _hover={{
+                  textDecoration: "none"
+                }}
               >
                 {genre.name}
               </Button>
